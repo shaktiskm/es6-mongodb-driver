@@ -12,8 +12,24 @@
 2. Start the application
 
     ```
-    node dist/api.js
+    let mongoConfig = {
+      "connectionstring": "http://127.0.0.1:27017/test",
+      "connectionTimeout": 5000,
+      "connectionOptions": {
+        "server": {
+          "poolSize": 5,
+          "socketOptions": {
+            "autoReconnect": true,
+            "keepAlive": 0
+          },
+          "reconnectTries": 30,
+          "reconnectInterval": 1000
+        }
+      }
+    },
+    mongoClient = new MongodbClient(mongoConfig);
     ```
+    Now using mongoClient object, you can call it's wrapper methods.
 
 ## Managing the project with Grunt
 
