@@ -12,6 +12,8 @@
 2. Start the application
 
     ```
+    import MongodbClient from "es-mongodb-driver";
+    
     let mongoConfig = {
       "connectionstring": "http://127.0.0.1:27017/test",
       "connectionTimeout": 5000,
