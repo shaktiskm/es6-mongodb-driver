@@ -12,7 +12,7 @@
 2. Start the application
 
     ```
-    import MongodbClient from "es-mongodb-driver";
+    import MongodbClient from "es6-mongodb-driver";
     
     let mongoConfig = {
       "connectionstring": "http://127.0.0.1:27017/test",
